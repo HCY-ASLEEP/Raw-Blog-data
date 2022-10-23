@@ -82,9 +82,11 @@ npm install --save hexo-deployer-git
 ###### 
 开始推送内容到 Github 上去
 ```
-hexo clean # 清理缓存
-hexo g     # 将 md 生成 html
-hexo d     # 推送到远程
+git add -A 					# 添加到 git 缓冲区
+git commit -m "first time"  # 提交所有更改
+hexo clean 					# 清理缓存
+hexo g     					# 将 md 生成 html
+hexo d     					# 推送到远程
 ```
 稍等片刻，就可以访问 https://用户名.github.io 了
 
