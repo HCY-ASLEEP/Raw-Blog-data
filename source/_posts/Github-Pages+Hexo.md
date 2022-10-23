@@ -24,8 +24,8 @@ Github 已经不支持密码登录，需要复杂一点的步骤去验证
 3. ![](/pictures/github-pages-hexo/4eb29e6a9b2c4bf6b2b5db9299b1a393.png)
 ![](/pictures/github-pages-hexo/3def5390d66a40eab1305013f28383d1.png)
 4. 选 classic 的 token 而不是 beta 的，因为 classic 可以永久
-![](/pictures/github-pages-hexo/de366346ddf443fba27a2cda84d9593f.png)
-5. ![](/pictures/github-pages-hexo/852ef46dcc3d4018bc79fdac2ed8c917.png)
+5. ![](/pictures/github-pages-hexo/de366346ddf443fba27a2cda84d9593f.png)
+![](/pictures/github-pages-hexo/852ef46dcc3d4018bc79fdac2ed8c917.png)
 6. 点击 generate token按钮
 
 ###### 
@@ -45,15 +45,15 @@ hexo init .
 初始化后，目录结构如下
 ```
 .
- ├── _config.yml # 网站配置信息
- ├── package.json # 应用程序信息
- ├── scaffolds # 模板文件夹
- ├── source # 存放用户资源
+ ├── _config.yml 	# 网站配置信息
+ ├── package.json 	# 应用程序信息
+ ├── scaffolds		# 模板文件夹
+ ├── source 		# 存放用户资源
  |   ├── _drafts
- |   └── _posts
- └── themes # 主题文件夹
+ |   └── _posts		# 存放个人博客
+ └── themes 		# 主题文件夹
 ```
-然后输入如下命令，然后在浏览器中打开 http://localhost:4000，就可以预览原始网站
+然后输入如下命令，然后在浏览器中打开 http://localhost:4000 ，就可以预览原始网站
 ```
 hexo new "博客名" 		# 新建博客
 hexo g 				# 生成静态网页
@@ -66,14 +66,14 @@ hexo s 				# 打开本地服务器
 ###### 
 注册 Github 帐号，有帐号了不用注册
 ###### 
-新建一个空仓库，暂时不要创建 README.md ，而且得确保你的仓库是 public 同时，仓库名一定要是 用户名.github.io
+新建一个空仓库，暂时不要创建 README.md ，而且得确保你的仓库是 public 同时，仓库名一定要是 **用户名.github.io**
 ###### 
 在上文提到的 blogs 文件夹下面安装 hexo-deployer-git
 ```bash
 npm install --save hexo-deployer-git
 ```
 ###### 
-在刚才的博客根目录中的站点配置文件 “_config.yml” ，设置为你的个人仓库名，branch 与你的 git 主分支对应
+在刚才的博客根目录中的站点配置文件 "_config.yml" ，设置为你的个人仓库名，branch 与你的 git 主分支对应
 ![](/pictures/github-pages-hexo/v2-376b7a40b8e6a310cc31bd3522ea9a7a_r.jpg)
 ![](/pictures/github-pages-hexo/v2-d15b384267cf4fa326c2e2febb1b2b62_r.png)
 ###### 
@@ -82,7 +82,7 @@ npm install --save hexo-deployer-git
 hexo clean 					# 清理缓存
 hexo g     					# 将 md 生成 html
 git add -A 					# 添加到 git 缓冲区
-git commit -m first time  # 提交所有更改
+git commit -m "first time"			# 提交所有更改
 hexo d     					# 推送到远程
 ```
 稍等片刻，就可以访问 https://用户名.github.io 了
