@@ -95,7 +95,7 @@ open_graph:
 # Value before `||` delimiter is the target link, value after `||` delimiter is the name of Font Awesome icon.
 # External url should start with http:// or https://
 menu:
-  home: / || fa fa-home
+  #home: / || fa fa-home
   #about: /about/ || fa fa-user
   tags: /tags/ || fa fa-tags
   categories: /categories/ || fa fa-th
@@ -142,9 +142,9 @@ avatar:
   # Replace the default image and set the url here.
   url: #/images/avatar.gif
   # If true, the avatar will be displayed in circle.
-  rounded: false
+  rounded: true
   # If true, the avatar will be rotated with the cursor.
-  rotated: false
+  rotated: true
 
 # Posts / Categories / Tags in sidebar.
 site_state: true
@@ -296,7 +296,7 @@ related_posts:
 # Easily browse and edit blog source code online.
 post_edit:
   enable: false
-  url: https://github.com/user-name/repo-name/tree/branch-name/subdirectory-name/ # Link for view source
+  url: https://github.com/HCY-ASLEEP/HCY-ASLEEP.github.io # Link for view source
   #url: https://github.com/user-name/repo-name/edit/branch-name/subdirectory-name/ # Link for fork & edit
 
 # Show previous post and next post in post footer if exists
@@ -405,8 +405,8 @@ bookmark:
 
 # `Follow me on GitHub` banner in the top-right corner.
 github_banner:
-  enable: false
-  permalink: https://github.com/yourname
+  enable: true
+  permalink: https://github.com/HCY-ASLEEP
   title: Follow me on GitHub
 
 
