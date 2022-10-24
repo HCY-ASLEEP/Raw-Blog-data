@@ -22,10 +22,10 @@ Github 已经不支持密码登录，需要复杂一点的步骤去验证
 1. 到个人中心-设置-setting
 2. ![](/pictures/github-pages-hexo/75e96721a3344ed5b397ec8adfeedb98.png)
 3. ![](/pictures/github-pages-hexo/4eb29e6a9b2c4bf6b2b5db9299b1a393.png)
-![](/pictures/github-pages-hexo/3def5390d66a40eab1305013f28383d1.png)
+   ![](/pictures/github-pages-hexo/3def5390d66a40eab1305013f28383d1.png)
 4. 选 classic 的 token 而不是 beta 的，因为 classic 可以永久
 5. ![](/pictures/github-pages-hexo/de366346ddf443fba27a2cda84d9593f.png)
-![](/pictures/github-pages-hexo/852ef46dcc3d4018bc79fdac2ed8c917.png)
+   ![](/pictures/github-pages-hexo/852ef46dcc3d4018bc79fdac2ed8c917.png)
 6. 点击 generate token按钮
 
 ###### 
