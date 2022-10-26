@@ -55,7 +55,7 @@ hexo init .
 ```
 然后输入如下命令，然后在浏览器中打开 http://localhost:4000 ，就可以预览原始网站
 ```
-hexo new "博客名" 		# 新建博客
+hexo new '博客名' 		# 新建博客
 hexo g 				# 生成静态网页
 hexo s 				# 打开本地服务器
 ```
