@@ -1,10 +1,10 @@
 ---
-title: 初识MARO
+title: 初识 MARO
 date: 2022-10-26 10:20:02
 tags:
 	- MARO
 ---
-### MARO,"Multi-Agent-Resource Optimization",中文是“多代理资源优化”，使用强化学习来解决资源调度的一个平台。
+### [MARO ，"Multi-Agent-Resource Optimization" ，中文是“多代理资源优化” ，使用强化学习来解决资源调度的一个平台](https://github.com/microsoft/maro)
 ######
 #### 可以应用 MARO 的实际例子：
 
