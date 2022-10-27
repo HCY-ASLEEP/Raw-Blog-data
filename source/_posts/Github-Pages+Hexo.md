@@ -1,7 +1,6 @@
 ---
 title: Github Pages + Hexo
 date: 2022-10-23 13:25:51
-categories: Hexo-Usage
 tags:
 	- Hexo
 	- Github
