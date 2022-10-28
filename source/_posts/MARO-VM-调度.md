@@ -41,6 +41,7 @@ tags:
 - 交互式
 
 	- 交互式 VM 通常需要较低的响应时间，因此设置此类 VM 只能分配给不可超额订阅的 PM 服务器  
+###### 
 - 延迟不敏感
 
 	- 不区分延迟的 VM 通常用于批处理任务或开发工作负荷，可以将此类 VM 分配给可过度订阅的 PM 服务器
@@ -88,10 +89,8 @@ tags:
 		
 		- 能耗曲线
 			
-			- 这个非线性曲线反映了 CPU 利用率 与 能耗 的关系
-			<img src="../pictures/maro-vm-调度/vm.energy_curve.svg"/>
-
-			- 这个曲线用于模拟（计算）能耗
+			- 这个非线性曲线反映了 CPU 利用率 与 能耗 的关系，用于模拟（计算）能耗
+	<img src="../pictures/maro-vm-调度/vm.energy_curve.svg"/>
 
 ###### 
 
@@ -106,6 +105,7 @@ tags:
 			- 如果启用此操作，则一旦发生重载，将解除分配位于重载 PM 的**所有** VM
 			- 考虑到过载的影响，MARO 仍然会计算高利用率的能耗，静默行动对 PM 利用率的影响将反映在下一次 tick 中 
 
+###### 
 - 无论是否启用终止所有 VM，过载 PM 的数量和过载 VM 的数量都会被计算
 - 这两个指标是累积值，将被记录为环境指标
 
@@ -154,6 +154,7 @@ tags:
 		- **vm_id**: int, 与 vm_table 中的 vm_id 匹配
 		- **cpu_utilization**: float, VM CPU 的利用率，以百分比单位 （%）存储
 
+
 ###### 
 
 ### 构建命令
@@ -183,11 +184,11 @@ tags:
 	- 一旦环境需要代理的响应来促进模拟，它就会抛出一个带有 DecisionPayload 的 PendingDecision 事件
 	- DecisionPayload 包含以下信息
 		
-		- **valid_pms (List[int])**：被视为有效的 PM ID 列表（其 CPU 和内存资源足以满足传入的 VM 请求） 
-		- **vm_id (int)**：传入的 VM Request（正在等待分配的 VM Request）的 vm_id ，
-		- **vm_cpu_cores_requirement (int)**：传入的 VM Request 的 CPU 内核数量
-		- **vm_memory_requirement (int)**：传入的 VM Request 请求的内存资源大小
-		- **remaining_buffer_time（int）**：当使用 remaining_buffer_time 时，VM Request 将被视为失败，可以在 config.yml 里面设置
+		- **valid_pms (List[int])** ：被视为有效的 PM ID 列表（其 CPU 和内存资源足以满足传入的 VM 请求） 
+		- **vm_id (int)** ：传入的 VM Request（正在等待分配的 VM Request）的 vm_id ，
+		- **vm_cpu_cores_requirement (int)** ：传入的 VM Request 的 CPU 内核数量
+		- **vm_memory_requirement (int)** ：传入的 VM Request 请求的内存资源大小
+		- **remaining_buffer_time（int）** ：当使用 remaining_buffer_time 时，VM Request 将被视为失败，可以在 config.yml 里面设置
 
 - #### Action
 	
@@ -201,11 +202,12 @@ tags:
 		
 		- **PostponeAction**：计算 remaining buffer time，这个 Action 包括：
 			
-			- **vm_id (int)**：等待分配的 VM 的 ID
+			- **vm_id (int)** ：等待分配的 VM 的 ID
 			- **postpone_step（int）**：分配要推迟的次数，单位是 DELAY_DURATION ，1 表示延迟 1 DELAY_DURATION ，可以在 config.yml 中设置
 			- 如果时间仍然足够，模拟器将重新生成一个新的请求事件，新需求事件的 仅在剩余缓冲时间上与旧事件不同
 			- 如果时间用完，模拟器会将其记录为失败的分配
 			 
+###### 
 
 ### Example
 
