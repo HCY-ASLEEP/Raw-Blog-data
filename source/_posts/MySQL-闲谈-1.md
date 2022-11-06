@@ -1,5 +1,5 @@
 ---
-title: MySQL 闲谈
+title: MySQL 闲谈 1
 date: 2022-11-05 21:60:29
 tags:
 	- 数据库
@@ -74,7 +74,7 @@ B+树相对于B树而言，它又有两种特性
 ###### 
 
 <div align="right"><div style="width:80%; border-style:solid; border-width:1px; border-radius:15px"><div style="text-align:center;margin:5%">
-<img src="../pictures/MySQL-闲谈/v2-54a18a07f7adfbda09983b815a92c5b8_r.jpg"/>
+<img src="/pictures/MySQL-闲谈/v2-54a18a07f7adfbda09983b815a92c5b8_r.jpg"/>
 </div></div></div>
 
 ###### 
@@ -152,7 +152,7 @@ SQL都订单ID索引，但在订单ID的索引树的叶子节点只有orderId和
 ###### 
 
 <div align="right"><div style="width:80%; border-style:solid; border-width:1px; border-radius:15px"><div style="text-align:center;margin:5%">
-<img src="../pictures/MySQL-闲谈/v2-2393680d1df54c696f97c8194b34237c_r.jpg"/>
+<img src="/pictures/MySQL-闲谈/v2-2393680d1df54c696f97c8194b34237c_r.jpg"/>
 </div></div></div>
 
 ###### 
@@ -200,7 +200,7 @@ SQL都订单ID索引，但在订单ID的索引树的叶子节点只有orderId和
 ###### 
 
 <div align="right"><div style="width:80%; border-style:solid; border-width:1px; border-radius:15px"><div style="text-align:center;margin:5%">
-<img src="../pictures/MySQL-闲谈/v2-6d6af5c6cfe9be27d1f41af4d7860d3a_r.jpg"/>
+<img src="/pictures/MySQL-闲谈/v2-6d6af5c6cfe9be27d1f41af4d7860d3a_r.jpg"/>
 </div></div></div>
 
 ###### 
@@ -248,5 +248,34 @@ OK…
 ###### 
 
 <div align="right"><div style="width:80%; border-style:solid; border-width:1px; border-radius:15px"><div style="text-align:center;margin:5%">
-<img src="../pictures/MySQL-闲谈/v2-6d6af5c6cfe9be27d1f41af4d7860d3a_r.jpg"/>
+<img src="/pictures/MySQL-闲谈/v2-ca51dbec74c22029ebde0650378dfbfd_r.jpg"/>
 </div></div></div>
+
+###### 
+
+
+### Summary
+- **为什么B+树？**
+
+	- 数据无法一次load到内存，B+树是多路搜索树，只有叶子节点才存储数据，叶子节点之间链表进行关联。（树矮，易遍历）
+
+
+###### 
+
+- **什么是回表？**
+
+	- 非聚簇索引在叶子节点只存储列值以及主键ID，有条件下尽可能用覆盖索引避免回表操作，提高查询速度
+
+
+###### 
+
+- **什么是最左匹配原则？**
+
+	- 从最左边为起点开始连续匹配，遇到范围查询终止
+
+
+###### 
+
+- **主键非自增会有什么问题？**
+
+	- 插入效率下降，存在移动块的数据问题
