@@ -10,7 +10,7 @@ tags:
 
 
 
-```
+```html
 <div align="right">
 <div style="width:47%; border-style:solid; border-width:1px; border-radius:15px">
 <div style="text-align:center;margin:5%">
@@ -40,7 +40,7 @@ tags:
 
 - 写法一
 
-	```
+	```html
 	<style type="text/css">
 	.div-diabox{
 	    width: 60%;
@@ -115,7 +115,7 @@ tags:
 
 - 写法二
 
-	```
+	```html
 	<div align="right">
 	<div style="width: 60%; border-style: solid; border-width: 1px; border-radius: 16px; position: relative; padding:30px; text-align:center">
 	<span style="width: 0px; height: 0px; border-style: solid; border-color: transparent transparent transparent black; border-width: 10px; position: absolute; top: 10px; right: -20px;"></span>

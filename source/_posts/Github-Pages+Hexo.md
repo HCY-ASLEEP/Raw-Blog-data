@@ -42,7 +42,7 @@ git init
 hexo init .
 ```
 初始化后，目录结构如下
-```
+```bash
 .
  ├── _config.yml 	# 网站配置信息
  ├── package.json 	# 应用程序信息
@@ -53,7 +53,7 @@ hexo init .
  └── themes 		# 主题文件夹
 ```
 然后输入如下命令，然后在浏览器中打开 http://localhost:4000 ，就可以预览原始网站
-```
+```bash
 hexo new '博客名' 		# 新建博客
 hexo g 				# 生成静态网页
 hexo s 				# 打开本地服务器
@@ -77,7 +77,8 @@ npm install --save hexo-deployer-git
 ![](/pictures/github-pages-hexo/v2-d15b384267cf4fa326c2e2febb1b2b62_r.png)
 ###### 
 开始推送内容到 Github 上去
-```
+
+```bash
 hexo clean 					# 清理缓存
 hexo g     					# 将 md 生成 html
 git add -A 					# 添加到 git 缓冲区

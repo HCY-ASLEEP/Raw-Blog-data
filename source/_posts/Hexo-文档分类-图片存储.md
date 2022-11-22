@@ -13,7 +13,7 @@ tags:
 ######   
 3. 修改 categories 中的 index.md 开头，增加一些东西使得变成如下内容
 
-	```
+	```markdown
 	---
 	title: categories
 	date: 2022-10-23 13:30:15
@@ -22,7 +22,7 @@ tags:
 	```
 4. 若要把 "_post" 內的其中一份文档添加到 "Hexo-Usage" categories 里面，在这个文档头部插入 categories: Hexo-Usage
 
-	```
+	```markdown
 	---
 	title: Hexo 基本美化
 	date: 2022-10-23 16:08:56
