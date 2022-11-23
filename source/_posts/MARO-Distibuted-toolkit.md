@@ -165,7 +165,7 @@ tags:
 	
 		- Example
 			
-			```
+			```python
 			from maro.communication import Message
 
 			message = Message(tag="check_in",
@@ -202,7 +202,7 @@ tags:
 
 		- session 的每个阶段由 proxy 在内部维护
 		- Example
-		```
+		```python
 		from maro.communication import SessionMessage, SessionType
 		
 		task_message = SessionMessage(tag="sum",
@@ -251,7 +251,7 @@ tags:
 			- tag：消息实例的属性
 			- amount：所需的消息实例量
 
-			```
+			```python
 			unit_event_abs = "worker:update:10"
 
 			unit_event_rel = "worker:update:60%"
@@ -259,7 +259,7 @@ tags:
 
 		- AND OR 操作支持更复杂的业务逻辑
 			
-			```
+			```python
 			combined_event_and = ("worker_01:update:2",
                       "worker_02:update:3",
                       "AND")
@@ -277,7 +277,7 @@ tags:
 
 			<img src="/pictures/maro-distributed-toolkit/register_table.trigger.svg"/>
 
-			```
+			```python
 			# A common handler function signature
 			def handler(that, proxy, messages):
 			    """
@@ -297,7 +297,7 @@ tags:
 
 		- 从本地函数类生成分布式 worker 类的帮助程序
 			
-			```
+			```python
 			from maro.communication import dist, Proxy
 
 			# Initialize proxy instance for remote communication.
@@ -324,4 +324,13 @@ tags:
 
 	
 
+<br/>
+<h3 style="display:flex">
+<span align="left" style="width:50%">
+PRE : {% post_link 初识-MARO 初识 MARO %}
+</span>
 
+<span align="right" style="width:50%">
+NEXT : {% post_link MARO-VM-调度 MARO VM 调度%}
+</span>
+</h3>

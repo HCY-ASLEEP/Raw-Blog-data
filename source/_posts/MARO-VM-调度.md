@@ -211,7 +211,7 @@ tags:
 
 ### Example
 
-```
+```python
 import random
 
 from maro.simulator import Env
@@ -263,3 +263,10 @@ while not is_done:
 print(f"[Random] Topology: azure.2019.10k. Total ticks: 8638. Start tick: 0")
 print(metrics)
 ```
+
+<br/>
+<h3>
+<div align="left">
+PRE : {% post_link MARO-Distibuted-toolkit MARO Distibuted toolkit %}
+</div>
+</h3>
